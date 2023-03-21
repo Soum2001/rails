@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :books
+  resources :authors
   resources :posts
   get 'greet',to:'greetings#hello'
   get 'post',to:'posts#index'
@@ -8,5 +10,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+ 
   root "greetings#hello"
 end
